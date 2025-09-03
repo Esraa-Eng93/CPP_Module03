@@ -6,7 +6,7 @@
 /*   By: esraa <esraa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 13:41:54 by ealshorm          #+#    #+#             */
-/*   Updated: 2025/08/31 20:32:54 by esraa            ###   ########.fr       */
+/*   Updated: 2025/09/03 17:06:14 by esraa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class ScavTrap : virtual public ClapTrap
 		ScavTrap(const ScavTrap& old_obj);
 		ScavTrap& operator=(const ScavTrap& old_obj);
 		void guardGate();
+		void attack(const std::string& target);
 		~ScavTrap();
 };
 

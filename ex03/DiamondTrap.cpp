@@ -6,7 +6,7 @@
 /*   By: esraa <esraa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 13:41:54 by ealshorm          #+#    #+#             */
-/*   Updated: 2025/08/31 21:18:19 by esraa            ###   ########.fr       */
+/*   Updated: 2025/09/03 17:26:15 by esraa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ DiamondTrap::DiamondTrap()
 	std::cout << "DiamondTrap Default Constructor is called"<< std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name + "_clap_name"), FragTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name), FragTrap(name)
 {
 	std::cout << "DiamondTrap Parametric Constructor is called"<< std::endl;
+	ClapTrap::set_name(name + "_clap_name");
 	this->name = name;
 	set_hit_points(FragTrap::get_hit_points());
 	set_energy_points(ScavTrap::get_energy_points());
